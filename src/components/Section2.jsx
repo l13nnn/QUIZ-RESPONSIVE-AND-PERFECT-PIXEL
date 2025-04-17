@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import '../styles/Section2.css';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { Navigation } from 'swiper/modules';
 import { Pagination } from 'swiper/modules';
 import Photo from '../assets/swiper1 1.png';
 import Photo2 from '../assets/swiper2 1.png';
@@ -12,6 +13,8 @@ import Photo3 from '../assets/swiper3 1.png';
 import Photo4 from '../assets/swiper4 1.png';
 import Photo5 from '../assets/swiper5 1.png';
 import Photo6 from '../assets/swiper6 1.png';
+import Photo7 from '../assets/Group 9.png';
+import Photo8 from '../assets/Group 8.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -56,10 +59,11 @@ function Section2() {
                         spaceBetween={40}
                         onSlideChange={() => console.log('slide change')}
                         onSwiper={(swiper) => console.log(swiper)}
-                        pagination={{
-                            clickable: true,
-                          }}
-                        modules={[Pagination]}
+                        navigation={{
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        }}
+                        modules={[Pagination, Navigation]}
                         className="mySwiper"
                     >
                         <SwiperSlide>
@@ -117,6 +121,12 @@ function Section2() {
                             </div>
                         </SwiperSlide>
                     </Swiper>
+                </div>
+                <div class="swiper-button-prev">
+                    <img src={Photo7} />
+                </div>
+                <div class="swiper-button-next">
+                    <img src={Photo8} />
                 </div>
             </div>
         </>

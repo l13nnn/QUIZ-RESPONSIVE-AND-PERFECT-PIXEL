@@ -94,3 +94,24 @@
 .photo-text-5 h6 {
     font-size: 1.2vw;
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    bottom: 1vw;
+    top: 100vw;
+    right: 1vw;
+    width: 3vw;
+    height: 3vw;
+    cursor: pointer;
+}
+
+.swiper-button-prev {
+    right: 4.5vw; 
+}
+
+.swiper-button-prev img,
+.swiper-button-next img {
+    width: 100%;
+    height: 100%;
+}
